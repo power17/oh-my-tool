@@ -27,11 +27,11 @@
 步骤：
 
 1. Fork 本仓库；
-2. 基于最新的`main`分支，新建自己的`feat/xxx_yyy`分支；
+2. 基于最新的`master`分支，新建自己的`feat/xxx_yyy`分支；
 3. 确认新加入的代码在本地可以正常运行，提交代码；
 4. 新建拉取请求：[【+ Pull Request】](https://github.com/power17/oh-my-tool/pulls/new)；
 5. 根据 PR 中的评审意见，发起讨论并对代码进行必要的调整；
-6. PR 被合并到`main`分支后，会被部署在[Gitee Pages](https://github.com/power17/oh-my-tool) --todo。
+6. PR 被合并到`master`分支后，会被部署在[Gitee Pages](https://github.com/power17/oh-my-tool) --todo。
 
 
 对代码的一些建议：
