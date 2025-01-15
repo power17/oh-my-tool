@@ -1,4 +1,4 @@
-# geektime-column-oh-my-kit
+# oh-my-tool
 
 「哦我的工具箱（`oh-my-tool`）」项目基于[MIT 协议](./LICENSE)开源，是一款集（duī）成（qì）了大量生产力工具的桌面 Web 应用软件，可以通过便捷的导航，轻松访问到趁手的、体验一致的工具。
 ### 如何使用
