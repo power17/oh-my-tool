@@ -1,6 +1,5 @@
-import { HEADER_HEIGHT } from './config'
-import { Icon } from '@iconify/react'
-import { Breadcrumb } from 'antd'
+import { HEADER_HEIGHT } from './config';
+import { Breadcrumb } from 'antd';
 function Header() {
   return (
     <div className="w-full sticky top-0 right-0 left-auto">
@@ -12,12 +11,6 @@ function Header() {
         }}
       >
         <div className="flex items-baseline">
-          {/* <Icon
-            icon="solar:basketball-bold"
-            width="50"
-            height="50"
-            className="m-auto text-[#00a76f]"
-          /> */}
           <div className="ml-4 hidden md:block">
             <Breadcrumb
               items={[
@@ -59,7 +52,7 @@ function Header() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
