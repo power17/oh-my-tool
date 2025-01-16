@@ -4,19 +4,18 @@ import {
   Navigate,
   type RouteObject,
 } from 'react-router-dom';
-import DefaultLayouts from '@/layouts';
-import Home from '@/pages/home';
-function ErrorPage() {
-  return 'error';
-}
+import DefaultLayouts from '@/layouts/default';
+import Home from '@/pages/dashboard/home';
+import Page404 from '@/pages/sys/error/Page404';
+
 const Main_ROUTES = {
-  path: '/',
+  path: '',
   element: <DefaultLayouts />,
-  errorElement: <ErrorPage />,
+  errorElement: <Page404 />,
   children: [
-    { index: true, element: <Navigate to="/home" replace /> },
+    { index: true, element: <Navigate to="/dashboard/workbench" replace /> },
     {
-      path: '/home',
+      path: '/dashboard/workbench',
       element: <Home />,
     },
   ],

@@ -13,4 +13,17 @@ export default defineConfig({
     ],
   },
   plugins: [react()],
+  // server: {
+  //   open: true,
+  //   host: true,
+  //   port: 5173,
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://localhost:3000',
+  //       rewrite: (path) => path.replace(/^\/api/, ''),
+  //       changeOrigin: true,
+  //       secure: false,
+  //     },
+  //   },
+  // },
 });

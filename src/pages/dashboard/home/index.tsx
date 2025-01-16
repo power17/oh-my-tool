@@ -1,25 +1,7 @@
-import { useUserActions, useUserInfo } from '@/store/useUserStore';
 import homeBg from './home-bg.svg';
 import styled from 'styled-components';
 
 export default function Home() {
-  const { setUserInfo } = useUserActions();
-  setUserInfo({
-    username: 'test',
-    id: '',
-    email: '',
-  });
-
-  setUserInfo({
-    username: 'test',
-    id: '',
-    email: '',
-  });
-  const userInfo = useUserInfo();
-
-  console.log(userInfo);
-
-  // console.log(userStore);
   return (
     <StyledHome>
       <hgroup>

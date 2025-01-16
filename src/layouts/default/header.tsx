@@ -1,4 +1,4 @@
-import { HEADER_HEIGHT } from './config';
+import { HEADER_HEIGHT } from '../config';
 import { Breadcrumb } from 'antd';
 function Header() {
   return (

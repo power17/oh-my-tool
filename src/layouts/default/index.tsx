@@ -3,7 +3,7 @@ import { type CSSProperties, Suspense } from 'react';
 import Header from './header';
 import Main from './main';
 import Nav from './nav';
-import { NAV_WIDTH } from './config';
+import { NAV_WIDTH } from '../config';
 function DefaultLayouts() {
   const secondLayoutStyle: CSSProperties = {
     display: 'flex',

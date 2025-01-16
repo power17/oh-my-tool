@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
-import { NAV_WIDTH } from './config';
+import { NAV_WIDTH } from '../config';
 import { Icon } from '@iconify/react';
 import type { MenuProps } from 'antd';
 import { AppstoreOutlined, MailOutlined } from '@ant-design/icons';
@@ -17,8 +17,8 @@ function Nav() {
       label: '首页',
       icon: <MailOutlined />,
       children: [
-        { key: '/home', label: '工作台' },
-        { key: '/home/analysis', label: '分析' },
+        { key: '/dashboard/workbench', label: '工作台' },
+        { key: '/dashboard/analysis', label: '分析' },
       ],
     },
     {
@@ -43,12 +43,12 @@ function Nav() {
       className="!fixed left-0 top-0 h-screen border-r border-dashed border-border"
     >
       <div className="flex h-full flex-col">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center py-4">
           <NavLink to="/">
             <Icon
               className="text-primary"
               icon="solar:basketball-bold"
-              fontSize="50"
+              fontSize="42"
             />
           </NavLink>
           <span className="ml-2 text-xl font-bold text-primary">
