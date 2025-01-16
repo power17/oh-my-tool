@@ -1,73 +1,40 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { NAV_WIDTH } from './config';
 import { Icon } from '@iconify/react';
 import type { MenuProps } from 'antd';
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from '@ant-design/icons';
+import { AppstoreOutlined, MailOutlined } from '@ant-design/icons';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 const { Sider } = Layout;
 function Nav() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const menuList: MenuItem[] = [
     {
-      key: 'sub1',
-      label: 'Navigation One',
+      key: '/',
+      label: '首页',
       icon: <MailOutlined />,
       children: [
-        { key: '1', label: 'Option 1' },
-        { key: '2', label: 'Option 2' },
-        { key: '3', label: 'Option 3' },
-        { key: '4', label: 'Option 4' },
+        { key: '/home', label: '工作台' },
+        { key: '/home/analysis', label: '分析' },
       ],
     },
     {
-      key: 'sub2',
-      label: 'Navigation Two',
+      key: '/management',
+      label: '管理',
       icon: <AppstoreOutlined />,
       children: [
-        { key: '5', label: 'Option 5' },
-        { key: '6', label: 'Option 6' },
-        {
-          key: 'sub3',
-          label: 'Submenu',
-          children: [
-            { key: '7', label: 'Option 7' },
-            { key: '8', label: 'Option 8' },
-          ],
-        },
-      ],
-    },
-    {
-      type: 'divider',
-    },
-    {
-      key: 'sub4',
-      label: 'Navigation Three',
-      icon: <SettingOutlined />,
-      children: [
-        { key: '9', label: 'Option 9' },
-        { key: '10', label: 'Option 10' },
-        { key: '11', label: 'Option 11' },
-        { key: '12', label: 'Option 12' },
-      ],
-    },
-    {
-      key: 'grp',
-      label: 'Group',
-      type: 'group',
-      children: [
-        { key: '13', label: 'Option 13' },
-        { key: '14', label: 'Option 14' },
+        { key: '/management/user', label: '用户' },
+        { key: '/management/system', label: '系统' },
       ],
     },
   ];
+
+  const menuClick: MenuProps['onClick'] = ({ key }) => {
+    navigate(key);
+  };
   return (
     <Sider
       theme="light"
@@ -89,7 +56,12 @@ function Nav() {
           </span>
         </div>
 
-        <Menu mode="inline" items={menuList} className="!border-none" />
+        <Menu
+          mode="inline"
+          items={menuList}
+          className="!border-none"
+          onClick={menuClick}
+        />
       </div>
     </Sider>
   );

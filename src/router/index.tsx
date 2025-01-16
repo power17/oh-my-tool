@@ -6,10 +6,13 @@ import {
 } from 'react-router-dom';
 import DefaultLayouts from '@/layouts';
 import Home from '@/pages/home';
-
+function ErrorPage() {
+  return 'error';
+}
 const Main_ROUTES = {
   path: '/',
   element: <DefaultLayouts />,
+  errorElement: <ErrorPage />,
   children: [
     { index: true, element: <Navigate to="/home" replace /> },
     {
